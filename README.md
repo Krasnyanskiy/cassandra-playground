@@ -47,4 +47,4 @@
    cqlsh> SELECT * FROM users;
    ```
    
-6. If result is not an empty table, then your cluster is ready to use.
+6. If the result isn't empty, then your cluster is ready to use.
