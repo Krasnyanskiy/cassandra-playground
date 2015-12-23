@@ -19,10 +19,13 @@ public class CassandraConfig {
     @Value("${app.cassandra.address}")
     private String contactPoint;
 
+    @Value("${app.cassandra.keyspace}")
+    private String keyspace;
+
     @Bean
     public Session session() {
         Cluster cluster = Cluster.builder().addContactPoint(contactPoint).build();
-        return cluster.connect("demo");
+        return cluster.connect(keyspace);
     }
 
     @Bean
