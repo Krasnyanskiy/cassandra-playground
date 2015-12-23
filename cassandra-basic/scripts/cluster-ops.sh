@@ -41,6 +41,21 @@ ccm stop
 ccm remove
 
 # ------------------------------------------------
-# download cassandra-3.1 and create 4-node cluster
+# download cassandra-2.1.5 and create 5-node cluster
 # ------------------------------------------------
 ccm create -v 2.1.5 -n 5 kabzon # do not use C* 3.x due to the driver issues (2.x is good enough)
+
+# -------------------------------------------------------------------------
+# use this command within the `cqlsh` to export the whale table into a file
+# -------------------------------------------------------------------------
+COPY demo.users TO './export.csv' ;
+
+# -------------
+# export schema
+# -------------
+ccm node1 cqlsh -e "DESC SCHEMA" > db_schema.cql
+
+# ---------------------
+# import data from file
+# ---------------------
+ccm node1 cqlsh SOURCE '~/IdeaProjects/cassandra-playground/cassandra-basic/src/main/resources/changes_01.cql';

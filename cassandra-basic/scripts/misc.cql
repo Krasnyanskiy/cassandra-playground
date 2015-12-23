@@ -1,6 +1,5 @@
 
-CREATE KEYSPACE demo
-WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 3};
+CREATE KEYSPACE demo WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 3};
 
 
 CREATE TABLE addresses (
@@ -22,8 +21,9 @@ CREATE TABLE users (
   PRIMARY KEY (id, firstname, lastname, age, email)
 );
 
+
 -- Cassandra 2.1.x
--- BEGIN BATCH
+BEGIN BATCH
 INSERT INTO demo.users (
   "id",
   "firstname",
@@ -45,7 +45,7 @@ INSERT INTO demo.users (
   "age",
   "email"
 ) VALUES ('4fdf1662-accd-4ddf-a277-77545d2f9c0c', 'Golda', 'Katz', 18, 'golda.katz@gmail.il');
--- APPLY BATCH;
+APPLY BATCH;
 
 
 -- Addresses in JSON (for Cassandra 3.x only)
