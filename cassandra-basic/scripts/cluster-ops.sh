@@ -43,4 +43,4 @@ ccm remove
 # ------------------------------------------------
 # download cassandra-3.1 and create 4-node cluster
 # ------------------------------------------------
-ccm create -v 3.1 -n 5 kabzon
+ccm create -v 2.1.5 -n 5 kabzon # do not use C* 3.x due to the driver issues (2.x is good enough)
