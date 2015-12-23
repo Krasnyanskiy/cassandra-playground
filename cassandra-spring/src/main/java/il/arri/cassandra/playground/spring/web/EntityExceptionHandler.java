@@ -14,7 +14,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
  * @author Arri Goldberg
  */
 @ControllerAdvice
-public class ExceptionHandlerController {
+public class EntityExceptionHandler {
 
     @ExceptionHandler(NoUserFoundException.class)
     @ResponseStatus(value = NOT_FOUND)
