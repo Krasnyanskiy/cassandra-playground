@@ -3,18 +3,45 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>il.arri.cassandra.playground</groupId>
     <artifactId>cassandra-playground</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>cassandra-basic</module>
+        <module>cassandra-spring</module>
+    </modules>
+
+    <properties>
+        <!--[ Java   ]--> <jdk.version>1.8</jdk.version>
+        <!--[ Mvn    ]--> <mvn.compiler.plugin.version>3.2</mvn.compiler.plugin.version>
+        <!--[ Lombok ]--> <lombok.version>1.16.4</lombok.version>
+    </properties>
+
     <dependencies>
-        <!-- Cassandra -->
+        <!--[ Lombok ]-->
         <dependency>
-            <groupId>org.apache.cassandra</groupId>
-            <artifactId>cassandra-all</artifactId>
-            <version>3.1</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mvn.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "829aa84a-4bba-411f-a4fb-38167a987cda",
+    "address": "548 Market St",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  {
+    "id": "bc87d5a0-a5ab-49b5-b1b5-345c62b16b4a",
+    "address": "1234 Broadway St",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  {
+    "id": "a36b2128-7549-45c9-85f8-118fcc6eed49",
+    "address": "4450 17th St",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  {
+    "id": "675d5b4f-30c5-43b6-acaf-1e4cb272be29",
+    "address": "101 Hyde St",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  }
+]
