@@ -49,7 +49,6 @@ public class CassandraConfig {
         session.setKeyspaceName(env.getProperty("cassandra.keyspace"));
         session.setConverter(converter());
         session.setSchemaAction(SchemaAction.NONE);
-
         return session;
     }
 
