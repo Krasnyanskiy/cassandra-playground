@@ -14,6 +14,7 @@ import java.util.Optional;
  * @author Arri Goldberg
  */
 @RestController
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
