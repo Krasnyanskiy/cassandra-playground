@@ -16,9 +16,10 @@
     </modules>
 
     <properties>
-        <!--[ Java   ]--> <jdk.version>1.8</jdk.version>
-        <!--[ Mvn    ]--> <mvn.compiler.plugin.version>3.2</mvn.compiler.plugin.version>
-        <!--[ Lombok ]--> <lombok.version>1.16.4</lombok.version>
+        <!--[ Java     ]--> <jdk.version>1.8</jdk.version>
+        <!--[ Mvn      ]--> <mvn.compiler.plugin.version>3.2</mvn.compiler.plugin.version>
+        <!--[ Lombok   ]--> <lombok.version>1.16.4</lombok.version>
+        <!--[ Encoding ]--> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
