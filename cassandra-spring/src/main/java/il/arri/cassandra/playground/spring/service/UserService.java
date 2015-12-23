@@ -1,9 +1,17 @@
 package il.arri.cassandra.playground.spring.service;
 
-import il.arri.cassandra.playground.model.User;
-import il.arri.cassandra.playground.repository.UserRepository;
+import com.datastax.driver.core.querybuilder.QueryBuilder;
+import com.datastax.driver.core.querybuilder.Select;
+import il.arri.cassandra.playground.spring.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.cassandra.core.CassandraTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 
 /**
  * @author Arri Goldberg
@@ -12,10 +20,19 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    private CassandraTemplate cassandraTemplate;
 
-    public User getUserBy(String firstname) {
-        return userRepository.get(firstname);
+    public Optional<User> getUserBy(String firstname) {
+        Select query = QueryBuilder.select()
+                .from("demo", "users")
+                .allowFiltering()
+                .where()
+                .and(QueryBuilder.eq("firstname", firstname))
+                .limit(1);
+
+        List<User> select = cassandraTemplate.select(query, User.class);
+
+        return select.isEmpty() ? empty() : of(select.get(0));
     }
 
 }
