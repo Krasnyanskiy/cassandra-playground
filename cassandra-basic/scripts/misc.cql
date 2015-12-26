@@ -1,8 +1,7 @@
 
 CREATE KEYSPACE demo WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 3};
 
-
-CREATE TABLE addresses (
+CREATE TABLE demo.addresses (
   id      text,
   address text,
   city    text,
@@ -12,7 +11,7 @@ CREATE TABLE addresses (
  );
 
 
-CREATE TABLE users (
+CREATE TABLE demo.users (
   id        text,
   firstname text,
   lastname  text,

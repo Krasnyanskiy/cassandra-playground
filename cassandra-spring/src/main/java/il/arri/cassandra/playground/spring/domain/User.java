@@ -1,4 +1,4 @@
-package il.arri.cassandra.playground.spring.model;
+package il.arri.cassandra.playground.spring.domain;
 
 import lombok.Data;
 import org.springframework.data.cassandra.mapping.Column;

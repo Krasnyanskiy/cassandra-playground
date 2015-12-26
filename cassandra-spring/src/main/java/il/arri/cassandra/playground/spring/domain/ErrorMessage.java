@@ -1,4 +1,4 @@
-package il.arri.cassandra.playground.spring.model;
+package il.arri.cassandra.playground.spring.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

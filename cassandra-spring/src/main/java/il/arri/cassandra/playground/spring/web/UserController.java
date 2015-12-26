@@ -1,7 +1,7 @@
 package il.arri.cassandra.playground.spring.web;
 
 import il.arri.cassandra.playground.spring.NoUserFoundException;
-import il.arri.cassandra.playground.spring.model.User;
+import il.arri.cassandra.playground.spring.domain.User;
 import il.arri.cassandra.playground.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,7 +1,7 @@
 package il.arri.cassandra.playground.spring.web;
 
 import il.arri.cassandra.playground.spring.NoUserFoundException;
-import il.arri.cassandra.playground.spring.model.ErrorMessage;
+import il.arri.cassandra.playground.spring.domain.ErrorMessage;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
