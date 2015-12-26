@@ -13,6 +13,7 @@
     <modules>
         <module>cassandra-basic</module>
         <module>cassandra-spring</module>
+        <module>cassandra-astyanax</module>
     </modules>
 
     <properties>

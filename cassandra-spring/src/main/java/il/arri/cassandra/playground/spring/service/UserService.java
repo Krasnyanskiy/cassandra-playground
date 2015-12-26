@@ -2,7 +2,7 @@ package il.arri.cassandra.playground.spring.service;
 
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.core.querybuilder.Select;
-import il.arri.cassandra.playground.spring.model.User;
+import il.arri.cassandra.playground.spring.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.cassandra.core.CassandraTemplate;
 import org.springframework.stereotype.Service;
